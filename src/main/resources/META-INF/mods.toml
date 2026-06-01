@@ -1,0 +1,26 @@
+modLoader="javafml"
+loaderVersion="[47,)"
+license="MIT"
+issueTrackerURL="https://github.com/example/enchantmentmod/issues"
+showAsResourcePack=false
+
+[[mods]]
+modId="enchantmentmod"
+version="${version}"
+displayName="Enchantment Mod"
+authors="Example"
+description="""
+A NeoForge mod that adds custom enchantments to Minecraft 1.21.1
+"""
+[[dependencies.enchantmentmod]]
+modId="neoforge"
+mandatory=true
+versionRange="[47,)"
+ordering="NONE"
+side="BOTH"
+[[dependencies.enchantmentmod]]
+modId="minecraft"
+mandatory=true
+versionRange="[1.21.1,1.22)"
+ordering="NONE"
+side="BOTH"
