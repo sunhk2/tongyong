@@ -1,0 +1,30 @@
+plugins {
+    id 'net.neoforged.gradle' version '6.5.49'
+}
+
+version = '1.0.0'
+group = 'com.example'
+archivesName = 'enchantmentmod'
+
+neoForge {
+    version = '1.21.1-47.0.0'
+    mappings channel: 'official', version: '1.21.1'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+}
+
+processResources {
+    inputs.property 'version', project.version
+    filesMatching('META-INF/mods.toml') {
+        expand 'version': project.version
+    }
+}
+
+jar {
+    from 'LICENSE'
+}
